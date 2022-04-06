@@ -1,0 +1,4 @@
+Database:	patel991_windsorshoe
+Host:	    localhost
+Username:	patel991_windsorshoe
+Password:	TeamProject123
