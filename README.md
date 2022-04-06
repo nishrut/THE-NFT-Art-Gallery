@@ -1,5 +1,5 @@
 
-# NFT Art Gallery
+# THE-NFT Art Gallery
 
 This project is designed to showcase a working art gallery. Users are given the option to an create account and buy digital artwork.
 In the website, there are six sections, Home, Collection, About Us, Shopping cart and Login.
