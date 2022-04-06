@@ -1,7 +1,8 @@
 <?php
+$_SESSION['didUserFound'] = false;
 $categoryProducts = $product->getProductOfCategory('Landscapes');
 shuffle($categoryProducts);
-
+$itemIdsWishList = $cart->getItemIdFromCartId('wishlist', $_SESSION['SessionUserId']);
 $itemIdsInCart = $cart->getItemIdFromCartId('cart', $_SESSION['SessionUserId']);
 
 // print_r($categoryProducts);
@@ -16,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <section class="nw" id="nw">
     <div class="nwh">
         <span>Collection</span>
-        <h2>Exposition</h2>
+        <h2>Landscapes</h2>
     </div>
 
     <div class="nwcontain container-fluid">
@@ -46,8 +47,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     ?>
                         <button class="disabled-cart-button" name="addToCartButtonLandscapes" disabled>In The Cart</button>
                     <?php
+                    } else if (in_array($item['item_id'], $itemIdsWishList)) {
+                    ?>
+                        <button class="disabled-cart-button" name="addToCartButtonLandscapes" disabled>In The Wishlist</button>
+                    <?php
+
                     } else {
                     ?>
+
 
                         <button class="bx bx-cart" name="addToCartButtonLandscapes"></button>
 

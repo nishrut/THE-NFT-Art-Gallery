@@ -1,10 +1,14 @@
 <?php
 
 // session_start();
+$_SESSION['didUserFound'] = false;
 
 $UserId = $_SESSION['SessionUserId'];
+
 shuffle($allProducts);
+$itemIdsWishList = $cart->getItemIdFromCartId('wishlist', $_SESSION['SessionUserId']);
 $itemIdsInCart = $cart->getItemIdFromCartId('cart', $_SESSION['SessionUserId']);
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['addToCartButtonShopNow'])) {
         $cart->addToTable($_POST['item_id'], 'cart', $_SESSION['SessionUserId']);
@@ -51,8 +55,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <?php
                     if (in_array($item['item_id'], $itemIdsInCart)) {
                     ?>
-                        <button class="disabled-cart-button"  name="addToCartButtonShopNow" disabled>In The Cart</button>
+                        <button class="disabled-cart-button" name="addToCartButtonShopNow" disabled>In The Cart</button>
                     <?php
+                    } else if (in_array($item['item_id'], $itemIdsWishList)) {
+                    ?>
+                        <button class="disabled-cart-button" name="addToCartButtonShopNow" disabled>In The Wishlist</button>
+                    <?php
+
                     } else {
                     ?>
 

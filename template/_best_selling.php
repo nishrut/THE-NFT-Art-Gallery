@@ -1,4 +1,5 @@
 <?php
+ $_SESSION['didUserFound'] = false;
 $categoryProducts = $product->getProductOfCategory('best selling');
 shuffle($categoryProducts);
 // print_r($categoryProducts);

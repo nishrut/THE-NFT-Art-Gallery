@@ -1,6 +1,7 @@
 <?php
 // session_start();
 $UserId = '2';
+ $_SESSION['didUserFound'] = false;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_SESSION['didUserFound'] == false;

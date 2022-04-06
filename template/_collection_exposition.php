@@ -1,4 +1,6 @@
 <?php
+$_SESSION['didUserFound'] = false;
+$itemIdsWishList = $cart->getItemIdFromCartId('wishlist', $_SESSION['SessionUserId']);
 $categoryProducts = $product->getProductOfCategory('Exposition');
 shuffle($categoryProducts);
 
@@ -46,8 +48,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     ?>
                         <button class="disabled-cart-button" name="addToCartButtonExposition" disabled>In The Cart</button>
                     <?php
+                    } else if (in_array($item['item_id'], $itemIdsWishList)) {
+                    ?>
+                        <button class="disabled-cart-button" name="addToCartButtonExposition" disabled>In The Wishlist</button>
+                    <?php
+
                     } else {
                     ?>
+
 
                         <button class="bx bx-cart" name="addToCartButtonExposition"></button>
 

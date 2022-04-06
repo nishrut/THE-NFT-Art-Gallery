@@ -1,3 +1,7 @@
+<?php
+ $_SESSION['didUserFound'] = false;
+
+?>
 <section class="moreimformation" id="moreimformation">
     <div class="imgofus" style="margin-left: 5px; border-radius : 7px">
         <img src="./assets/moreabout.png" alt="image of our" class="mt-3"/>

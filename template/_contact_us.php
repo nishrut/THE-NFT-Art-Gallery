@@ -1,3 +1,7 @@
+<?php
+ $_SESSION['didUserFound'] = false;
+
+?>
 <section class="detailinformation" id="detailinformation">
     <div class="detail">
         <span>Our Location In Windsor</span>

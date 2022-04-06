@@ -3,6 +3,7 @@
 <br>
 <br>
 <?php
+ $_SESSION['didUserFound'] = false;
 $cartItems = $cart->getCartItems('cart', $_SESSION['SessionUserId']);
 $saveForLaterItems = $cart->getCartItems('wishlist', $_SESSION['SessionUserId']);
 // print_r($_SERVER['PHP_SELF']);

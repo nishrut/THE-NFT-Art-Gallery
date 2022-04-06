@@ -1,19 +1,29 @@
 <?php
 // session_start();
 $_SESSION['didUserExist'] = true;
-// $_SESSION['didUserFound'] == true;
+
+// if (empty($_SESSION['checkUser'])) {
+//     $_SESSION['checkUser'] = false;
+//     $_SESSION['didUserFound'] = false;
+// } else {
+//     if ($_SESSION['checkUser'] == true)
+//         $_SESSION['didUserFound'] = true;
+//     else
+//         $_SESSION['didUserFound'] = false;
+// }
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    if (isset($_POST['submit-login'])) {
+    if (!empty($_POST['user_login']) && !empty($_POST['password_login'])) {
+        if (isset($_POST['submit-login'])) {
 
-        if (!empty($_POST['user_login']) && !empty($_POST['password_login'])) {
 
             $userId_ = $user->getUserId($_POST['user_login'], $_POST['password_login']);
             $_SESSION['SessionUserId'] = $userId_;
 
             if ($userId_ == 1) {
-                // $_SESSION['SessionUserId'] = 0;
+              
                 $_SESSION['didUserFound'] = true;
                 header("Location:" . $_SERVER['PHP_SELF']);
             } else {

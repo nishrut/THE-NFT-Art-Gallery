@@ -154,6 +154,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             font-size: 18px;
             margin-left: 50px;
         }
+      
+       .disabled-cart-button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 2px;
+            font-size: 20px;
+            color: rgb(253, 253, 253);
+            border-radius: 7px 0 7px 0;
+            background: #ac8c25;
+
+        }
 
         .button:hover {
             background: #ac8c25;
@@ -552,6 +564,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             background-color: #ac8c25;
 
         }
+      .b58 {
+background-color: Transparent;
+background-repeat:no-repeat;
+border: none;
+}
     </style>
     <?php
 
@@ -595,7 +612,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             ?>
                 <form method="POST">
                     <!-- <li><a name="logout-button-submit" class="b2">LogOut</a></li> -->
-                    <li><button name="logout-button-submit" class="b2">LogOut</button></li>
+                    <li><button name="logout-button-submit" class="b2 b58">LogOut</button></li>
                 </form>
             <?php
 
