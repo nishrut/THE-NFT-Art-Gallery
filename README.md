@@ -3,7 +3,7 @@
 
 This project is designed to showcase a working art gallery. Users are given the option to an create account and buy digital artwork.
 In the website, there are six sections, Home, Collection, About Us, Shopping cart and Login.
-On Home page, it shows a good image and quots.
+On Home page, it shows a good image and quote.
 On Collection page, one can see all the collections of art that we have.
 User can add products to Shopping cart and save for latter from collection page.
 On About Us, it shows some information about website.
@@ -39,4 +39,13 @@ https://patel991.myweb.cs.uwindsor.ca/group-13/index.php
 ## Documentation
 
 [Documentation](https://www.canva.com/design/DAE9HfSRVdo/e9udveAIKGqZ8VYfKTOysQ/view?utm_content=DAE9HfSRVdo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+
+
+## Tech Stack
+
+**Framework:** Bootstrap
+
+**Programming Languages:** HTML, CSS, PHP
+
+**Libraries:** Boxicons
 
