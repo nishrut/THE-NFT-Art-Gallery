@@ -4,9 +4,9 @@ class Database
 {
     // Database Connection Properties
     protected $host = 'localhost';
-    protected $user = 'patel991_nftart';
-    protected $password = 'Windsor@123';
-    protected $database = 'patel991_nftart';
+    protected $user = 'root';
+    protected $password = '';
+    protected $database = 'the-nft-art-gallery';
 
 
     // connection property
